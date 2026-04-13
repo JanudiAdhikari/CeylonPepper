@@ -1,0 +1,39 @@
+:root {
+  --primary: #2E7D32;
+  --secondary: #66BB6A;
+  --accent: #FFD700;
+  --bg-color: #f9fdfa;
+  --text-dark: #1f2937;
+  --text-light: #4b5563;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Offset for fixed navbar */
+}
