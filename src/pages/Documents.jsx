@@ -12,7 +12,7 @@ const Documents = () => {
   return (
     <div className="container fade-in" style={{ padding: '40px 20px' }}>
       <h2 className="section-title">Project Documents</h2>
-      <p className="text-center" style={{ marginBottom: '40px' }}>Downloadable resources and finalized research papers for the Ceylon Pepper project.</p>
+      <p className="text-center" style={{ marginBottom: '40px' }}>Downloadable resources and finalized research papers for the CeylonPepper project.</p>
       
       <div className="card-grid">
         {docs.map((doc, i) => (

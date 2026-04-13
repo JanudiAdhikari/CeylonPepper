@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo_circle.png';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -29,8 +30,8 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Leaf className="logo-icon" />
-          <span className="logo-text">Ceylon Pepper</span>
+          <img src={logo} alt="CeylonPepper Logo" className="logo-icon" />
+          <span className="logo-text">CeylonPepper</span>
         </div>
 
         <div className="navbar-links desktop-only">

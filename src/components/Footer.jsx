@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf } from 'lucide-react';
+import logo from '../assets/logo_circle.png';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-brand">
           <div className="footer-logo">
-            <Leaf className="logo-icon" />
-            <span className="logo-text">Ceylon Pepper</span>
+            <img src={logo} alt="CeylonPepper Logo" className="logo-icon" />
+            <span className="logo-text">CeylonPepper</span>
           </div>
           <p>AI-Powered Intelligent Decision Support System for Smart Pepper Farming in Sri Lanka</p>
         </div>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Ceylon Pepper Project Group. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} CeylonPepper Project Group. All rights reserved.</p>
       </div>
     </footer>
   );
