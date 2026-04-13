@@ -22,3 +22,14 @@ body {
 .min-h-screen {
   min-height: 100vh;
 }
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Offset for fixed navbar */
+}
