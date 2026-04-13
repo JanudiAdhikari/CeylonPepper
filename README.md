@@ -1,5 +1,7 @@
 # CeylonPepper – AI-Powered Intelligent Decision Support System
 
+**Live Application:** [https://ceylon-pepper.vercel.app/](https://ceylon-pepper.vercel.app/)
+
 A modern, responsive academic project website for a university research project focusing on Smart Pepper Farming in Sri Lanka.
 
 ## Domain Overview
