@@ -2,14 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PageLayout from './components/PageLayout';
 import Home from './pages/Home';
 import Domain from './pages/Domain';
-
-// Placeholder components until we implement the rest
-const Placeholder = ({ title }) => (
-  <div className="container fade-in text-center" style={{ padding: '100px 20px', minHeight: '60vh' }}>
-    <h2 className="section-title">{title}</h2>
-    <p>This section is currently under construction. Check back soon for updates!</p>
-  </div>
-);
+import Milestones from './pages/Milestones';
+import Documents from './pages/Documents';
+import Presentations from './pages/Presentations';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -18,11 +15,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/domain" element={<Domain />} />
-          <Route path="/milestones" element={<Placeholder title="Project Milestones" />} />
-          <Route path="/documents" element={<Placeholder title="Project Documents" />} />
-          <Route path="/presentations" element={<Placeholder title="Presentations (Slides)" />} />
-          <Route path="/about" element={<Placeholder title="About Us" />} />
-          <Route path="/contact" element={<Placeholder title="Contact Us" />} />
+          <Route path="/milestones" element={<Milestones />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/presentations" element={<Presentations />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </PageLayout>
     </Router>
