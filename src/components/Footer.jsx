@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
           <p>AI-Powered Intelligent Decision Support System for Smart Pepper Farming in Sri Lanka</p>
         </div>
-        
+
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
@@ -24,11 +24,11 @@ const Footer = () => {
             <li><Link to="/about">About Us</Link></li>
           </ul>
         </div>
-        
+
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p>SLIIT Research Project</p>
-          <p>Email: research@ceylonpepper.lk</p>
+          <p>CeylonPepper</p>
+          <p>Email: researchsliit479@gmail.com</p>
         </div>
       </div>
       <div className="footer-bottom">

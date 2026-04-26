@@ -5,21 +5,21 @@ const ContactUs = () => {
   return (
     <div className="container fade-in" style={{ padding: '40px 20px' }}>
       <h2 className="section-title">Contact Us</h2>
-      
+
       <div className="contact-container">
         <div className="contact-info">
           <h3>Get in Touch</h3>
           <p>If you have any questions about our research project or wish to learn more, feel free to contact us.</p>
           <div className="info-block">
-            <strong>Email:</strong> <a href="mailto:research@ceylonpepper.lk">research@ceylonpepper.lk</a>
+            <strong>Email:</strong> <a href="mailto:researchsliit479@gmail.com">researchsliit479@gmail.com</a>
           </div>
           <div className="info-block">
             <strong>Phone:</strong> +94 11 234 5678
           </div>
           <div className="info-block">
-            <strong>Address:</strong><br/>
-            SLIIT Malabe Campus,<br/>
-            New Kandy Road, Malabe,<br/>
+            <strong>Address:</strong><br />
+            SLIIT Malabe Campus,<br />
+            New Kandy Road, Malabe,<br />
             Sri Lanka.
           </div>
         </div>
