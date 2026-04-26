@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { BookOpen, Search, Target, Compass, GitBranch, Cpu } from 'lucide-react';
 import AccordionItem from '../components/AccordionItem';
 
-import yieldImg from '../assets/yield_prediction.png';
-import diseaseImg from '../assets/disease_detection.png';
-import qualityImg from '../assets/quality_grading.png';
-import priceImg from '../assets/price_prediction.png';
+const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
 
 const Domain = () => {
   const [openSection, setOpenSection] = useState(0);
@@ -82,7 +79,7 @@ const Domain = () => {
           <div className="methodology-module">
             <h4 className="module-title">1. Yield Prediction Module</h4>
             <div className="module-content">
-              <img src={yieldImg} alt="Yield Prediction" className="module-image" />
+              <img src={getImgUrl("1L0fkhJVeqV_6C0zzIwKPYoYRx7GsBot2")} alt="Yield Prediction" className="module-image" />
               <div className="module-details">
                 <p>Implementation of an efficient yield forecasting system using:</p>
                 <ul>
@@ -98,7 +95,7 @@ const Domain = () => {
           <div className="methodology-module">
             <h4 className="module-title">2. Disease Detection System</h4>
             <div className="module-content">
-              <img src={diseaseImg} alt="Disease Detection" className="module-image" />
+              <img src={getImgUrl("1cMLSxKOiYVLuVgxZmqBoJssGev_nrsvU")} alt="Disease Detection" className="module-image" />
               <div className="module-details">
                 <p>Advanced deep learning system featuring:</p>
                 <ul>
@@ -114,7 +111,7 @@ const Domain = () => {
           <div className="methodology-module">
             <h4 className="module-title">3. Automated Quality Grading</h4>
             <div className="module-content">
-              <img src={qualityImg} alt="Quality Grading" className="module-image" />
+              <img src={getImgUrl("1OLk8I6bPCLLA5auMhQ7JVu5Mhr9fJy-D")} alt="Quality Grading" className="module-image" />
               <div className="module-details">
                 <p>Image-based analysis for consistent assessment incorporating:</p>
                 <ul>
@@ -130,7 +127,7 @@ const Domain = () => {
           <div className="methodology-module">
             <h4 className="module-title">4. Market Price Forecasting</h4>
             <div className="module-content">
-              <img src={priceImg} alt="Market Price Forecasting" className="module-image" />
+              <img src={getImgUrl("1oxSlZXvpTJCUO4_SbFTLBZxwzaali3Ps")} alt="Market Price Forecasting" className="module-image" />
               <div className="module-details">
                 <p>Time-series predictive modeling focusing on:</p>
                 <ul>

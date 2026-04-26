@@ -1,52 +1,47 @@
 import React from 'react';
 import '../styles/Pages.css';
-import tafFile from '../assets/TAF_25-26J-479.pdf';
-import yieldPropFile from '../assets/yield_proposal.pdf';
-import diseasePropFile from '../assets/disease_proposal.pdf';
-import qualityPropFile from '../assets/quality_proposal.pdf';
-import pricePropFile from '../assets/price_proposal.pdf';
-import cl1File from '../assets/checklist1.pdf';
-import cl2File from '../assets/checklist2.pdf';
-import researchPprFile from '../assets/research_ppr.pdf';
+
+const driveLink = "https://drive.google.com/drive/u/0/folders/1exIfd-c7729cKTegBXncKqgUFlIxhDfB?ths=true";
+const getLink = (id) => id ? `https://drive.google.com/file/d/${id}/view` : driveLink;
 
 const Documents = () => {
   const documentGroups = [
     {
       groupTitle: "Topic Assessment Form (TAF)",
       docs: [
-        { title: "TAF Document", desc: "Initial topic assessment form submitted for approval.", file: tafFile }
+        { title: "TAF Document", desc: "Initial topic assessment form submitted for approval.", file: getLink("1kNlOSyvuqFj-YhmRNDm5depbuR6RWhnk") }
       ]
     },
     {
       groupTitle: "Proposal Reports",
       docs: [
-        { title: "Yield Prediction Proposal", desc: "Component proposal report.", file: yieldPropFile },
-        { title: "Disease Detection Proposal", desc: "Component proposal report.", file: diseasePropFile },
-        { title: "Quality Grading Proposal", desc: "Component proposal report.", file: qualityPropFile },
-        { title: "Price Forecasting Proposal", desc: "Component proposal report.", file: pricePropFile }
+        { title: "Yield Prediction Proposal", desc: "Component proposal report.", file: getLink("1gkcuHEHewXYLBB1W18goVWr727-1LHB_") },
+        { title: "Disease Detection Proposal", desc: "Component proposal report.", file: getLink("1mUWZKkAVuH1LG_WHX7yxCZqBOYrisqbD") },
+        { title: "Quality Grading Proposal", desc: "Component proposal report.", file: getLink("1WJN9L0VHIJVejdgwK2e3KAlKmBOMKPpg") },
+        { title: "Price Forecasting Proposal", desc: "Component proposal report.", file: getLink("1EdGWYH8OxlttBy_CbUhWF1oYWjAR9nyI") }
       ]
     },
     {
       groupTitle: "Checklists",
       docs: [
-        { title: "Checklist 1", desc: "First progress tracking checklist.", file: cl1File },
-        { title: "Checklist 2", desc: "Second progress tracking checklist.", file: cl2File }
+        { title: "Checklist 1", desc: "First progress tracking checklist.", file: getLink("1AfT0jToGXFJe8u1EbFaRok8vx8OzvD_o") },
+        { title: "Checklist 2", desc: "Second progress tracking checklist.", file: getLink("1yVeRuMwLPaiiOPJebl2tIc7T0JCTTIXN") }
       ]
     },
     {
       groupTitle: "Final Reports",
       docs: [
-        { title: "Final Report (Group)", desc: "Comprehensive final group report.", file: tafFile },
-        { title: "Yield Prediction Final", desc: "Component final report.", file: tafFile },
-        { title: "Disease Detection Final", desc: "Component final report.", file: tafFile },
-        { title: "Quality Grading Final", desc: "Component final report.", file: tafFile },
-        { title: "Price Forecasting Final", desc: "Component final report.", file: tafFile }
+        { title: "Final Report (Group)", desc: "Comprehensive final group report.", file: driveLink },
+        { title: "Yield Prediction Final", desc: "Component final report.", file: driveLink },
+        { title: "Disease Detection Final", desc: "Component final report.", file: driveLink },
+        { title: "Quality Grading Final", desc: "Component final report.", file: driveLink },
+        { title: "Price Forecasting Final", desc: "Component final report.", file: driveLink }
       ]
     },
     {
       groupTitle: "Research Paper",
       docs: [
-        { title: "Research Paper", desc: "Finalized research paper for publication.", file: researchPprFile }
+        { title: "Research Paper", desc: "Finalized research paper for publication.", file: getLink("1Q11SOmvkkcwRoS0qyffecc4LC-p56xf3") }
       ]
     }
   ];
@@ -69,7 +64,7 @@ const Documents = () => {
                 <div className="doc-icon" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>📄</div>
                 <h4 style={{ fontSize: '1.1rem', marginBottom: '10px' }}>{doc.title}</h4>
                 <p style={{ fontSize: '0.9rem', marginBottom: '15px' }}>{doc.desc}</p>
-                <a href={doc.file} download className="btn-download" style={{ display: 'inline-block', textDecoration: 'none' }}>
+                <a href={doc.file} target="_blank" rel="noopener noreferrer" className="btn-download" style={{ display: 'inline-block', textDecoration: 'none' }}>
                   Download PDF
                 </a>
               </div>
