@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import '../styles/Accordion.css';
 
-const AccordionItem = ({ icon: Icon, title, children, isOpen: defaultOpen = false }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-
+const AccordionItem = ({ icon: Icon, title, children, isOpen, onToggle }) => {
   return (
     <div className={`accordion-item ${isOpen ? 'open' : ''}`}>
-      <button className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
+      <button className="accordion-header" onClick={onToggle}>
         <div className="accordion-title-wrapper">
           <Icon className="accordion-icon" />
           <span className="accordion-title">{title}</span>
