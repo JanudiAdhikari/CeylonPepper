@@ -1,12 +1,15 @@
 import React from 'react';
 import '../styles/Pages.css';
 
+const driveLink = "https://drive.google.com/drive/u/0/folders/1exIfd-c7729cKTegBXncKqgUFlIxhDfB?ths=true";
+const getLink = (id) => id ? `https://drive.google.com/file/d/${id}/view` : driveLink;
+
 const Presentations = () => {
   const slides = [
-    { title: "Proposal Presentation", desc: "Slides from the initial proposal." },
-    { title: "Progress Presentation 1", desc: "First progress evaluation slides." },
-    { title: "Progress Presentation 2", desc: "Second progress evaluation slides." },
-    { title: "Final Presentation", desc: "Comprehensive final presentation slides." }
+    { title: "Proposal Presentation", desc: "Slides from the initial proposal.", file: getLink("11-lm9q6pvxswFlB1hS1rFbinWLOL8ZtP") },
+    { title: "Progress Presentation 1", desc: "First progress evaluation slides.", file: getLink("1BGGA1q_INlq4JB9IxElBtptWjHnYOF6U") },
+    { title: "Progress Presentation 2", desc: "Second progress evaluation slides.", file: getLink("17FT12JekoOogWiepcAuko9x9ktaHU8RA") },
+    { title: "Final Presentation", desc: "Comprehensive final presentation slides.", file: driveLink }
   ];
 
   return (
@@ -18,7 +21,9 @@ const Presentations = () => {
             <div className="pres-icon">📊</div>
             <h4>{s.title}</h4>
             <p>{s.desc}</p>
-            <button className="btn-download" onClick={(e) => {e.preventDefault(); alert('Slides Placeholder')}}>View Slides</button>
+            <a href={s.file} target="_blank" rel="noopener noreferrer" className="btn-download" style={{ display: 'inline-block', textDecoration: 'none' }}>
+              Download PDF
+            </a>
           </div>
         ))}
       </div>

@@ -147,6 +147,14 @@
   border: 1px solid #dcfce7;
   color: var(--primary);
 }
+.module-image {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
 .module-details p {
   margin-bottom: 10px;
   font-weight: 500;
