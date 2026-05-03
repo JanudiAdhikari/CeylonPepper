@@ -8,7 +8,7 @@ const Home = () => {
       <section className="hero">
         <div className="container text-center">
           <h1 className="hero-title">CeylonPepper</h1>
-          <h2 className="hero-subtitle">AI-Powered Intelligent Decision Support System for Smart Farming</h2>
+          <h2 className="hero-subtitle">Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka</h2>
           <p className="hero-abstract">
             An innovative solution integrating Machine Learning, Deep Learning, and Blockchain concepts to revolutionize pepper farming in Sri Lanka through accurate yield predictions, rapid disease detection, quality grading, and market forecasting.
           </p>
