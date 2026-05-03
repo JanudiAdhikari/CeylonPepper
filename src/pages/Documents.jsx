@@ -65,7 +65,7 @@ const Documents = () => {
                 <h4 style={{ fontSize: '1.1rem', marginBottom: '10px' }}>{doc.title}</h4>
                 <p style={{ fontSize: '0.9rem', marginBottom: '15px' }}>{doc.desc}</p>
                 <a href={doc.file} target="_blank" rel="noopener noreferrer" className="btn-download" style={{ display: 'inline-block', textDecoration: 'none' }}>
-                  Download PDF
+                  View PDF
                 </a>
               </div>
             ))}

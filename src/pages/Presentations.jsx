@@ -22,7 +22,7 @@ const Presentations = () => {
             <h4>{s.title}</h4>
             <p>{s.desc}</p>
             <a href={s.file} target="_blank" rel="noopener noreferrer" className="btn-download" style={{ display: 'inline-block', textDecoration: 'none' }}>
-              Download PDF
+              View Slides
             </a>
           </div>
         ))}

@@ -5,7 +5,7 @@ const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
 
 const AboutUs = () => {
   const members = [
-    { name: "Madara Meegama", role: "Undergraduate Researcher", email: "it22097224@my.sliit.lk", img: getImgUrl("1MMkcKt23FqlDQdgzqsL9p_GVHXUPqnFd") },
+    { name: "Madara Meegama (Leader)", role: "Undergraduate Researcher", email: "it22097224@my.sliit.lk", img: getImgUrl("1MMkcKt23FqlDQdgzqsL9p_GVHXUPqnFd") },
     { name: "Janudi Adhikari", role: "Undergraduate Researcher", email: "it22195548@my.sliit.lk", img: getImgUrl("1muAR5aaXeWTxR2sIsVjG5npuyIPGiBhm") },
     { name: "Ashika Ridimahaliyadda", role: "Undergraduate Researcher", email: "it22250674@my.sliit.lk", img: getImgUrl("14Ni9SOim_bdCxhDxjlKaSn9T0ta7QHJj") },
     { name: "Induwara Ranasinghe", role: "Undergraduate Researcher", email: "it22353870@my.sliit.lk", img: getImgUrl("1FGikbFx6ruHoqasUFbcgLnbf3g0LP3iv") }
@@ -21,14 +21,14 @@ const AboutUs = () => {
       <h3 className="section-subtitle" style={{ textAlign: 'center', marginBottom: '30px' }}>Supervising Committee</h3>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', marginBottom: '60px' }}>
         <div className="supervisor-card shadow-card text-center" style={{ width: '300px', padding: '30px 20px', borderRadius: '12px', background: 'white' }}>
-           <div className="avatar" style={{ fontSize: '3rem', marginBottom: '15px' }}>👩‍🏫</div>
+           <img src={getImgUrl("1FEo_ez98zAeQXgtWejNmViksWWYIy3_0")} alt="Ms. Ishara Weerathunga" style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', margin: '0 auto 15px', border: '3px solid #f0fdf4', display: 'block' }} />
            <h4 style={{ color: 'var(--primary)', marginBottom: '5px' }}>Ms. Ishara Weerathunga</h4>
            <p style={{ fontWeight: '500', color: '#4b5563', marginBottom: '10px' }}>Supervisor</p>
            <a href="mailto:ishara.w@sliit.lk" className="email" style={{ color: 'var(--primary)', textDecoration: 'none' }}>ishara.w@sliit.lk</a>
         </div>
         
         <div className="supervisor-card shadow-card text-center" style={{ width: '300px', padding: '30px 20px', borderRadius: '12px', background: 'white' }}>
-           <div className="avatar" style={{ fontSize: '3rem', marginBottom: '15px' }}>👨‍🏫</div>
+           <img src={getImgUrl("1VmFxQ79WSoSJkJ_y5Y97vCuvGcWZU-DB")} alt="Mr. Eishan Weerasinghe" style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', margin: '0 auto 15px', border: '3px solid #f0fdf4', display: 'block' }} />
            <h4 style={{ color: 'var(--primary)', marginBottom: '5px' }}>Mr. Eishan Weerasinghe</h4>
            <p style={{ fontWeight: '500', color: '#4b5563', marginBottom: '10px' }}>Co-Supervisor</p>
            <a href="mailto:eishan.w@sliit.lk" className="email" style={{ color: 'var(--primary)', textDecoration: 'none' }}>eishan.w@sliit.lk</a>
