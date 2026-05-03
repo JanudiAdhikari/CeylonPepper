@@ -5,7 +5,7 @@ const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
 
 const AboutUs = () => {
   const members = [
-    { name: "Madara Meegama", role: "Undergraduate Researcher", email: "it22097224@my.sliit.lk", img: getImgUrl("1MMkcKt23FqlDQdgzqsL9p_GVHXUPqnFd") },
+    { name: "Madara Meegama (Leader)", role: "Undergraduate Researcher", email: "it22097224@my.sliit.lk", img: getImgUrl("1MMkcKt23FqlDQdgzqsL9p_GVHXUPqnFd") },
     { name: "Janudi Adhikari", role: "Undergraduate Researcher", email: "it22195548@my.sliit.lk", img: getImgUrl("1muAR5aaXeWTxR2sIsVjG5npuyIPGiBhm") },
     { name: "Ashika Ridimahaliyadda", role: "Undergraduate Researcher", email: "it22250674@my.sliit.lk", img: getImgUrl("14Ni9SOim_bdCxhDxjlKaSn9T0ta7QHJj") },
     { name: "Induwara Ranasinghe", role: "Undergraduate Researcher", email: "it22353870@my.sliit.lk", img: getImgUrl("1FGikbFx6ruHoqasUFbcgLnbf3g0LP3iv") }

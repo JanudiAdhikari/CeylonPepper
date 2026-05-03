@@ -1,4 +1,4 @@
-# CeylonPepper – AI-Powered Intelligent Decision Support System
+# CeylonPepper – Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka
 
 **Live Application:** [https://ceylon-pepper.vercel.app/](https://ceylon-pepper.vercel.app/)
 
