@@ -477,49 +477,78 @@
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 900px;
+  gap: 50px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .contact-info, .contact-form {
   flex: 1;
-  min-width: 300px;
+  min-width: 350px;
   background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid #f1f5f9;
 }
 .form-group {
   margin-bottom: 20px;
 }
 .form-group label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 .form-group input, .form-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
   font-family: inherit;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: white;
+  box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1);
 }
 .btn-primary {
   background-color: var(--primary);
   color: white;
   border: none;
-  padding: 12px 24px;
-  border-radius: 4px;
+  padding: 15px 30px;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 .btn-primary:hover {
-  background-color: var(--secondary);
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
 }
 .info-block {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.info-block-icon {
+  background: #f0fdf4;
+  color: var(--primary);
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 .info-block a {
   color: var(--primary);
