@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Mail, MapPin } from 'lucide-react';
 import '../styles/Pages.css';
 
 const ContactUs = () => {
@@ -41,26 +42,41 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container fade-in" style={{ padding: '40px 20px' }}>
+    <div className="container fade-in" style={{ padding: '40px 20px', maxWidth: '1200px' }}>
       <h2 className="section-title">Contact Us</h2>
+      <p className="text-center" style={{ marginBottom: '50px', fontSize: '1.1rem', color: 'var(--text-light)', maxWidth: '600px', margin: '0 auto 50px' }}>
+        Have questions about our research project or want to learn more? We'd love to hear from you. Send us a message below!
+      </p>
 
       <div className="contact-container">
         <div className="contact-info">
-          <h3>Get in Touch</h3>
-          <p>If you have any questions about our research project or wish to learn more, feel free to contact us.</p>
+          <h3 style={{ color: 'var(--primary)', marginBottom: '30px', fontSize: '1.5rem' }}>Get in Touch</h3>
+          
           <div className="info-block">
-            <strong>Email:</strong> <a href="mailto:researchsliit479@gmail.com">researchsliit479@gmail.com</a>
+            <div className="info-block-icon">
+              <Mail size={24} />
+            </div>
+            <div>
+              <strong style={{ display: 'block', color: 'var(--text-dark)', marginBottom: '5px' }}>Email Address</strong>
+              <a href="mailto:researchsliit479@gmail.com" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>researchsliit479@gmail.com</a>
+            </div>
           </div>
+          
           <div className="info-block">
-            <strong>Address:</strong><br />
-            SLIIT Malabe Campus,<br />
-            New Kandy Road, Malabe,<br />
-            Sri Lanka.
+            <div className="info-block-icon">
+              <MapPin size={24} />
+            </div>
+            <div style={{ color: 'var(--text-light)' }}>
+              <strong style={{ display: 'block', color: 'var(--text-dark)', marginBottom: '5px' }}>Location</strong>
+              SLIIT Malabe Campus,<br />
+              New Kandy Road, Malabe,<br />
+              Sri Lanka.
+            </div>
           </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-          <h3>Send us a Message</h3>
+          <h3 style={{ color: 'var(--primary)', marginBottom: '30px', fontSize: '1.5rem' }}>Send us a Message</h3>
 
           {status === 'success' && (
             <div style={{ backgroundColor: '#dcfce7', color: '#166534', padding: '15px', borderRadius: '8px', marginBottom: '20px', fontWeight: '500' }}>
