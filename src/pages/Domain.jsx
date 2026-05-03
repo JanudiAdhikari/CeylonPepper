@@ -159,7 +159,7 @@ const Domain = () => {
                         </div>
                         <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
                             <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Databases</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>MongoDB, SQLite</p>
+                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>MongoDB</p>
                         </div>
                         <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
                             <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>APIs</h5>

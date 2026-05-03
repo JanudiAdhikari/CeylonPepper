@@ -12,7 +12,7 @@ const Footer = () => {
                         <img src={logo} alt="CeylonPepper Logo" className="logo-icon" />
                         <span className="logo-text">CeylonPepper</span>
                     </div>
-                    <p>Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka</p>
+                    <p>Revolutionizing pepper farming in Sri Lanka through innovative Machine Learning and Blockchain solutions for a smarter agricultural future.</p>
                 </div>
 
                 <div className="footer-links">
@@ -26,9 +26,9 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>CeylonPepper</p>
-                    <p>Email: researchsliit479@gmail.com</p>
+                    <h4>Get In Touch</h4>
+                    <p>📍 SLIIT, Sri Lanka</p>
+                    <p>📧 researchsliit479@gmail.com</p>
                 </div>
             </div>
             <div className="footer-bottom">
