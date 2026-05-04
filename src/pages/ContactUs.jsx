@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import '../styles/Pages.css';
 
 const ContactUs = () => {
@@ -71,6 +71,15 @@ const ContactUs = () => {
               SLIIT Malabe Campus,<br />
               New Kandy Road, Malabe,<br />
               Sri Lanka.
+            </div>
+          </div>
+          <div className="info-block">
+            <div className="info-block-icon">
+              <Phone size={24} />
+            </div>
+            <div>
+              <strong style={{ display: 'block', color: 'var(--text-dark)', marginBottom: '5px' }}>Phone</strong>
+              <a href="tel:070393839481" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>070 3839 481</a>
             </div>
           </div>
         </div>

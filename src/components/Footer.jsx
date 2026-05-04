@@ -28,6 +28,7 @@ const Footer = () => {
                     <h4>Get In Touch</h4>
                     <p>📍 SLIIT, Sri Lanka</p>
                     <p>📧 researchsliit479@gmail.com</p>
+                    <p>📞 <a href="tel:0703839481" style={{ color: '#94a3b8', textDecoration: 'none' }}>070 3839 481</a></p>
                 </div>
             </div>
             <div className="footer-bottom">
