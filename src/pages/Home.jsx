@@ -80,26 +80,27 @@ const Home = () => {
             <div className="feature-card">
               <div className="feature-icon">📈</div>
               <h4>Yield Prediction</h4>
-              <p>Machine learning models utilizing environmental data to predict seasonal pepper yields accurately.</p>
+              <p>Hybrid multimodal framework utilizing environmental data and plant features to predict seasonal pepper yields with high precision.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">🔍</div>
+              <div className="feature-icon">🔬</div>
               <h4>Disease Detection</h4>
-              <p>CNN-based image classification to identify and diagnose pepper leaf diseases early and precisely.</p>
+              <p>Advanced CNN-based image classification to identify and diagnose pepper leaf diseases early, helping farmers mitigate risks.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">⭐</div>
               <h4>Quality Grading</h4>
-              <p>Automated image-based analysis for consistent and reliable pepper quality assessment.</p>
+              <p>Automated image-based analysis and YOLOv8 pipeline for consistent, bias-free pepper quality assessment based on international standards.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">💰</div>
-              <h4>Market Forecast with Blockchain</h4>
-              <p>ML-driven price forecasting with blockchain integrity to ensure transparent and reliable market insights.</p>
+              <div className="feature-icon">💹</div>
+              <h4>Market Forecast</h4>
+              <p>ML-driven price forecasting integrated with blockchain for immutable traceability and transparent market insights for all stakeholders.</p>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Benefits Section */}
       <section className="benefits">
