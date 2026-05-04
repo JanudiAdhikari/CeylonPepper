@@ -6,14 +6,17 @@ const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
 
 const AboutUs = () => {
   const members = [
-    { name: "Madara Meegama", role: "Undergraduate Researcher", email: "it22097224@my.sliit.lk", img: getImgUrl("1MMkcKt23FqlDQdgzqsL9p_GVHXUPqnFd"), linkedin: "https://www.linkedin.com/in/madara-meegama-296697243/", github: "https://github.com/madarameegama7" },
-    { name: "Janudi Adhikari", role: "Undergraduate Researcher", email: "it22195548@my.sliit.lk", img: getImgUrl("1muAR5aaXeWTxR2sIsVjG5npuyIPGiBhm"), linkedin: "https://www.linkedin.com/in/janudi-adhikari-b5a724313/", github: "https://github.com/JanudiAdhikari" },
-    { name: "Ashika Ridimahaliyadda", role: "Undergraduate Researcher", email: "it22250674@my.sliit.lk", img: getImgUrl("14Ni9SOim_bdCxhDxjlKaSn9T0ta7QHJj"), linkedin: "https://www.linkedin.com/in/ashika-ridimahaliyadda-27aa432a2/", github: "https://github.com/0326ashi" },
-    { name: "Induwara Ranasinghe", role: "Undergraduate Researcher", email: "it22353870@my.sliit.lk", img: getImgUrl("1FGikbFx6ruHoqasUFbcgLnbf3g0LP3iv"), linkedin: "https://www.linkedin.com/in/induwarar98/", github: "https://github.com/induwaraR98" }
+    { name: "Madara Meegama", role: "Undergraduate Researcher", email: "madarameegama7@gmail.com", img: getImgUrl("1MMkcKt23FqlDQdgzqsL9p_GVHXUPqnFd"), linkedin: "https://www.linkedin.com/in/madara-meegama-296697243/", github: "https://github.com/madarameegama7" },
+    { name: "Janudi Adhikari", role: "Undergraduate Researcher", email: "januditharushika@gmail.com", img: getImgUrl("1muAR5aaXeWTxR2sIsVjG5npuyIPGiBhm"), linkedin: "https://www.linkedin.com/in/janudi-adhikari-b5a724313/", github: "https://github.com/JanudiAdhikari" },
+    { name: "Ashika Ridimahaliyadda", role: "Undergraduate Researcher", email: "ashikaridi2002@gmail.com", img: getImgUrl("14Ni9SOim_bdCxhDxjlKaSn9T0ta7QHJj"), linkedin: "https://www.linkedin.com/in/ashika-ridimahaliyadda-27aa432a2/", github: "https://github.com/0326ashi" },
+    { name: "Induwara Ranasinghe", role: "Undergraduate Researcher", email: "iranasinghe98@gmail.com", img: getImgUrl("1FGikbFx6ruHoqasUFbcgLnbf3g0LP3iv"), linkedin: "https://www.linkedin.com/in/induwarar98/", github: "https://github.com/induwaraR98" }
   ];
 
   return (
     <div className="container fade-in" style={{ padding: '40px 50px', maxWidth: '1400px' }}>
+      <div className="badge-container">
+        <span className="section-badge">Our Team</span>
+      </div>
       <h2 className="section-title">About Us</h2>
       <p className="text-center" style={{ marginBottom: '50px', fontSize: '1.2rem', color: 'var(--text-dark)', fontWeight: '500', maxWidth: '800px', margin: '0 auto 50px' }}>
         Meet the team behind CeylonPepper: SLIIT Software Engineering undergraduates driving the future of smart agriculture with ML and Blockchain.

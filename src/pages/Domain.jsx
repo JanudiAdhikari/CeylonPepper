@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BookOpen, Search, Target, Compass, GitBranch, Cpu } from 'lucide-react';
 import AccordionItem from '../components/AccordionItem';
 
@@ -6,20 +6,47 @@ const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
 
 const Domain = () => {
     const [openSection, setOpenSection] = useState(-1);
+    const sectionRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.05 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
 
     const toggleSection = (index) => {
         setOpenSection(openSection === index ? -1 : index);
     };
 
     return (
-        <div className="fade-in" style={{ backgroundColor: '#f9fafb', minHeight: '100vh', paddingBottom: '60px' }}>
-            <div className="scope-header">
+        <div ref={sectionRef} className={`fade-in ${isVisible ? 'page-animated' : ''}`} style={{ backgroundColor: '#f9fafb', minHeight: '100vh', paddingBottom: '60px' }}>
+            <div className="badge-container anim-item anim-delay-1">
+                <span className="section-badge">Research Scope</span>
+            </div>
+            <div className="scope-header anim-item anim-delay-1">
                 <h1>Project Scope</h1>
                 <div className="underline"></div>
                 <p>Comprehensive overview of our research approach and methodology</p>
             </div>
 
-            <div className="accordion-wrapper">
+            <div className="accordion-wrapper anim-item anim-delay-2">
                 <AccordionItem
                     icon={BookOpen}
                     title="Literature Survey"

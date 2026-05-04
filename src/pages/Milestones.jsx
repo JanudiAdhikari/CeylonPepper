@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../styles/Pages.css';
 
 const Milestones = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const timelineEvents = [
     { name: "Brainstorming & Group Registration", date: "March - May 2025", desc: "Initial brainstorming workshop, supervisor selection, and finalizing the research group registration." },
     { name: "Topic Assessment & Charter", date: "June - July 2025", desc: "Submitting the Topic Assessment Form (TAF) and finalizing the Project Charter after topic acceptance." },
@@ -29,36 +54,42 @@ const Milestones = () => {
   ];
 
   return (
-    <div className="container fade-in" style={{ padding: '40px 20px', maxWidth: '1000px' }}>
-      <h2 className="section-title">Project Milestones</h2>
+    <div ref={sectionRef} className={`container ${isVisible ? 'page-animated' : ''}`} style={{ padding: '80px 20px', maxWidth: '1000px' }}>
+      <div className="badge-container anim-item anim-delay-1">
+        <span className="section-badge">Project Timeline</span>
+      </div>
+      <div className="anim-item anim-delay-1">
+        <h2 className="section-title">Project Milestones</h2>
+      </div>
 
-      <div className="assessment-schedule" style={{ marginBottom: '60px' }}>
-        <h3 style={{ textAlign: 'left', marginBottom: '20px', color: 'var(--primary)', fontSize: '1.5rem', borderBottom: '2px solid #f0fdf4', paddingBottom: '10px' }}>
-          Assessment Schedule
-        </h3>
-        <div className="marks-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '15px' }}>
+      <div className="assessment-schedule" style={{ marginBottom: '80px' }}>
+        <div className="anim-item anim-delay-2">
+          <h3 className="milestone-subtitle">Assessment Schedule</h3>
+        </div>
+        <div className="marks-grid">
           {assessments.map((a, i) => (
-            <div key={i} className="mark-card" style={{ display: 'flex', justifyContent: 'space-between', padding: '15px 20px', background: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)', borderLeft: '4px solid var(--primary)' }}>
-              <span style={{ fontWeight: '500', color: '#374151' }}>{a.name}</span>
-              <span style={{ fontWeight: '700', color: 'var(--primary)' }}>{a.marks}</span>
+            <div key={i} className={`mark-card anim-item anim-delay-${(i % 4) + 1}`}>
+              <span className="mark-name">{a.name}</span>
+              <span className="mark-val">{a.marks}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <h3 style={{ textAlign: 'left', marginBottom: '30px', color: 'var(--primary)', fontSize: '1.5rem', borderBottom: '2px solid #f0fdf4', paddingBottom: '10px' }}>
-        Tentative Assessment Timeline
-      </h3>
-      <div className="timeline" style={{ margin: '0' }}>
+      <div className="anim-item anim-delay-1">
+        <h3 className="milestone-subtitle">Tentative Assessment Timeline</h3>
+      </div>
+      
+      <div className="timeline">
         {timelineEvents.map((m, i) => (
-          <div className="timeline-item" key={i}>
+          <div className={`timeline-item anim-item anim-delay-${(i % 4) + 2}`} key={i}>
             <div className="timeline-dot"></div>
             <div className="timeline-content">
-              <h3 style={{ color: 'var(--primary)', marginBottom: '10px' }}>{m.name}</h3>
-              <div className="timeline-meta" style={{ display: 'flex', gap: '20px', marginBottom: '15px', fontSize: '0.9rem', color: '#64748b', fontWeight: '500' }}>
+              <h3>{m.name}</h3>
+              <div className="timeline-meta">
                 <span className="date">📅 {m.date}</span>
               </div>
-              <p style={{ color: 'var(--text-light)', lineHeight: '1.6' }}>{m.desc}</p>
+              <p>{m.desc}</p>
             </div>
           </div>
         ))}

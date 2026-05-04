@@ -43,6 +43,9 @@ const ContactUs = () => {
 
   return (
     <div className="container fade-in" style={{ padding: '40px 20px', maxWidth: '1200px' }}>
+      <div className="badge-container">
+        <span className="section-badge">Connect</span>
+      </div>
       <h2 className="section-title">Contact Us</h2>
       <p className="text-center" style={{ marginBottom: '50px', fontSize: '1.1rem', color: 'var(--text-light)', maxWidth: '600px', margin: '0 auto 50px' }}>
         Have questions about our research project or want to learn more? We'd love to hear from you. Send us a message below!
