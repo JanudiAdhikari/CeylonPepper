@@ -1254,3 +1254,173 @@
   color: var(--primary);
   text-decoration: none;
 }
+
+/* Hero background texture */
+.hero-dot-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(46,125,50,0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* Ambient orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-orb-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(46,125,50,0.07) 0%, transparent 70%);
+  top: -150px; right: -120px;
+  animation: orbFloat 9s ease-in-out infinite;
+}
+.hero-orb-2 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(102,187,106,0.06) 0%, transparent 70%);
+  bottom: -80px; left: 35%;
+  animation: orbFloat 11s ease-in-out infinite reverse;
+}
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-22px); }
+}
+
+/* Badge */
+.hero-badge-row { margin-bottom: 22px; }
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(46,125,50,0.09);
+  color: var(--primary);
+  border: 1px solid rgba(46,125,50,0.18);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.badge-live-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.75); }
+}
+
+/* Title — make it bigger & use serif for impact */
+.hero-title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  margin-bottom: 18px;
+  color: #1a2e1a;
+}
+
+/* Tagline replaces subtitle + abstract */
+.hero-tagline {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: var(--text-light);
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+/* Stat strip */
+.hero-stat-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: #e5e7eb;
+}
+
+/* CTA button arrows */
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  margin-left: 2px;
+}
+.hero-btn:hover .btn-arrow { transform: translateX(4px); }
+
+/* Floating tags on mockup */
+.floating-tag {
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  padding: 7px 13px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  border: 1px solid #f1f5f9;
+  white-space: nowrap;
+  z-index: 5;
+}
+.tag-1 { top: 20px; right: -10px; animation: tagFloat 5s ease-in-out infinite; }
+.tag-2 { bottom: 100px; left: -20px; animation: tagFloat 6s 0.5s ease-in-out infinite reverse; }
+.tag-3 { bottom: 30px; right: 0; animation: tagFloat 7s 1s ease-in-out infinite; }
+@keyframes tagFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Glow rings behind mockup */
+.mockup-glow-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(46,125,50,0.12);
+  pointer-events: none;
+  width: 320px; height: 320px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ringPulse 4s ease-in-out infinite;
+}
+.mockup-glow-ring-2 {
+  width: 420px; height: 420px;
+  border-color: rgba(46,125,50,0.06);
+  animation-delay: 1.2s;
+}
+@keyframes ringPulse {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.03); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 960px) {
+  .hero-stat-strip { justify-content: center; }
+  .hero-tagline { text-align: center; margin: 0 auto 28px; }
+  .floating-tag { display: none; }
+}
