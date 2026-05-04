@@ -56,7 +56,7 @@ const Home = () => {
               <div className="anim-item anim-delay-6">
                 <div className="hero-actions">
                   <a href="#documents" className="hero-btn btn-primary" style={{ textDecoration: 'none' }}>Explore Documents</a>
-                  <a href="#contact" className="hero-btn btn-secondary" style={{ textDecoration: 'none' }}>Reach Us</a>
+                  <a href="#milestones" className="hero-btn btn-secondary" style={{ textDecoration: 'none' }}>View Milestones</a>
                 </div>
               </div>
 
@@ -75,6 +75,9 @@ const Home = () => {
       {/* Features Section */}
       <section className="features">
         <div className="container">
+          <div className="badge-container">
+            <span className="section-badge">Core Modules</span>
+          </div>
           <h3 className="section-title">Core Modules</h3>
           <div className="features-grid">
             <div className="feature-card">
@@ -105,6 +108,9 @@ const Home = () => {
       {/* Benefits Section */}
       <section className="benefits">
         <div className="container">
+          <div className="badge-container">
+            <span className="section-badge">Key Benefits</span>
+          </div>
           <h3 className="section-title">Key Benefits</h3>
           <div className="benefits-grid">
             <div className="benefit-item">

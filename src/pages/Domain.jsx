@@ -37,6 +37,9 @@ const Domain = () => {
 
     return (
         <div ref={sectionRef} className={`fade-in ${isVisible ? 'page-animated' : ''}`} style={{ backgroundColor: '#f9fafb', minHeight: '100vh', paddingBottom: '60px' }}>
+            <div className="badge-container anim-item anim-delay-1">
+                <span className="section-badge">Research Scope</span>
+            </div>
             <div className="scope-header anim-item anim-delay-1">
                 <h1>Project Scope</h1>
                 <div className="underline"></div>

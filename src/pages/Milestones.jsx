@@ -55,6 +55,9 @@ const Milestones = () => {
 
   return (
     <div ref={sectionRef} className={`container ${isVisible ? 'page-animated' : ''}`} style={{ padding: '80px 20px', maxWidth: '1000px' }}>
+      <div className="badge-container anim-item anim-delay-1">
+        <span className="section-badge">Project Timeline</span>
+      </div>
       <div className="anim-item anim-delay-1">
         <h2 className="section-title">Project Milestones</h2>
       </div>
