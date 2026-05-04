@@ -53,8 +53,12 @@ const Domain = () => {
                     isOpen={openSection === 0}
                     onToggle={() => toggleSection(0)}
                 >
-                    <p>The literature review examines existing research and systems related to traditional pepper farming in Sri Lanka. Several studies have explored similar challenges, providing valuable insights into current approaches and their limitations.</p>
-                    <p>Traditional pepper farming faces severe limitations due to manual observation and reliance on historical methods. Existing Machine Learning approaches have been explored globally, but there is a distinct gap in adapting these systems to the unique environmental and agricultural context of Sri Lanka.</p>
+                    <div style={{ textAlign: 'justify' }}>
+                        <p>The literature review examines existing research and systems related to traditional pepper farming in Sri Lanka. Recent studies in agricultural technology highlight a significant shift towards integrating Machine Learning and IoT to modernize traditional farming practices, addressing long-standing challenges in yield estimation and disease management.</p>
+                        <p>Research on yield prediction has demonstrated the effectiveness of advanced algorithms such as Long Short-Term Memory (LSTM) networks and XGBoost in analyzing complex, multi-variable datasets. These models integrate historical weather patterns, soil conditions, and crop performance to provide accurate seasonal forecasts, helping farmers manage climate-related risks.</p>
+                        <p>In the domain of plant pathology, Convolutional Neural Networks (CNNs) like ResNet and EfficientNet have become the gold standard for automated disease detection. Recent implementations have achieved high classification accuracies for pepper-specific diseases, enabling early intervention. Furthermore, computer vision research emphasizes automated quality grading based on physical attributes such as color, size, and texture, ensuring standardized market valuation.</p>
+                        <p>To address market volatility, researchers are increasingly exploring hybrid predictive models that combine time-series analysis with global economic indicators. Additionally, the integration of Blockchain technology is being recognized for its ability to provide immutable traceability, fulfilling international demands for supply chain transparency and verified "farm-to-table" documentation.</p>
+                    </div>
                 </AccordionItem>
 
                 <AccordionItem
@@ -63,9 +67,11 @@ const Domain = () => {
                     isOpen={openSection === 1}
                     onToggle={() => toggleSection(1)}
                 >
-                    <p>Current systems exhibit several critical limitations that hinder their effectiveness. These gaps represent significant opportunities for innovation and improvement.</p>
-                    <p>There is a notable lack of an integrated, end-to-end system tailored specifically for Sri Lankan pepper farmers. Current solutions offer no explainable AI tailored for farmers with limited technical knowledge.</p>
-                    <p>Furthermore, there is highly limited automation concerning the quality grading of the produce, often leading to inconsistencies and unfair market practices.</p>
+                    <div style={{ textAlign: 'justify' }}>
+                        <p>Despite the technological advancements in global agriculture, several critical gaps remain within the Sri Lankan black pepper industry. Current yield prediction models often lack the localized precision required for Sri Lanka's unique micro-climatic conditions, failing to integrate real-time soil and environmental data for region-specific forecasts. In the area of disease management, existing solutions are predominantly standalone and fail to provide integrated communication channels between farmers and agricultural authorities for rapid intervention.</p>
+                        <p>There is also a notable absence of automated, standardized quality grading systems for post-harvest pepper. Farmers currently rely on subjective manual observations, which often leads to inconsistent valuations and unfair market practices. Furthermore, most commodity price forecasting models do not account for the specific interplay between local weather patterns and Sri Lankan export trends, leaving farmers vulnerable to market volatility.</p>
+                        <p>While Blockchain technology is frequently discussed, its practical application for small-scale spice traceability remains largely unexplored in the local context. Most importantly, there is a total lack of a unified, end-to-end digital ecosystem that integrates yield forecasting, disease detection, automated grading, and transparent supply chain tracking into a single, accessible platform tailored for Sri Lankan farmers.</p>
+                    </div>
                 </AccordionItem>
 
                 <AccordionItem
@@ -74,24 +80,26 @@ const Domain = () => {
                     isOpen={openSection === 2}
                     onToggle={() => toggleSection(2)}
                 >
-                    <div style={{ marginBottom: '25px', padding: '25px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                        <h4 style={{ color: 'var(--text-dark)', marginBottom: '12px', fontSize: '1.15rem' }}>The Core Challenge</h4>
-                        <p style={{ color: 'var(--text-light)', marginBottom: '12px', lineHeight: '1.6' }}>
-                            Sri Lanka's agricultural sector, particularly the pepper farming industry, faces escalating challenges in maintaining consistent profitability, quality, and supply chain integrity. Traditional, manual approaches are highly vulnerable to volatile climate changes, unpredictable market forces, and a lack of technological adoption, which ultimately leads to severe bottlenecks and economic losses.
-                        </p>
-                        <p style={{ color: 'var(--text-light)', margin: 0, lineHeight: '1.6' }}>
-                            <strong>Key Obstacles:</strong> Unpredictable crop yields hindering supply chain planning, absence of automated and standardized quality grading systems, severe price volatility causing farmer exploitation, and delayed, inaccurate detection of critical plant diseases.
-                        </p>
-                    </div>
+                    <div style={{ textAlign: 'justify' }}>
+                        <div style={{ marginBottom: '25px', padding: '25px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                            <h4 style={{ color: 'var(--text-dark)', marginBottom: '12px', fontSize: '1.15rem' }}>The Core Challenge</h4>
+                            <p style={{ color: 'var(--text-light)', marginBottom: '12px', lineHeight: '1.6' }}>
+                                Sri Lanka's agricultural sector, particularly the pepper farming industry, faces escalating challenges in maintaining consistent profitability, quality, and supply chain integrity. Traditional, manual approaches are highly vulnerable to volatile climate changes, unpredictable market forces, and a lack of technological adoption, which ultimately leads to severe bottlenecks and economic losses.
+                            </p>
+                            <p style={{ color: 'var(--text-light)', margin: 0, lineHeight: '1.6' }}>
+                                <strong>Key Obstacles:</strong> Unpredictable crop yields hindering supply chain planning, absence of automated and standardized quality grading systems, severe price volatility causing farmer exploitation, and delayed, inaccurate detection of critical plant diseases.
+                            </p>
+                        </div>
 
-                    <div style={{ padding: '25px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-                        <h4 style={{ color: 'var(--text-dark)', marginBottom: '12px', fontSize: '1.15rem' }}>Our Innovative Solution</h4>
-                        <p style={{ color: 'var(--text-light)', marginBottom: '12px', lineHeight: '1.6' }}>
-                            To address these systemic issues, our research introduces a comprehensive <strong>Machine Learning Based Integrated Solution for Smart Pepper Farming</strong>. We aim to revolutionize the traditional landscape by creating an accessible, digital ecosystem tailored specifically for local farmers.
-                        </p>
-                        <p style={{ color: 'var(--text-light)', margin: 0, lineHeight: '1.6' }}>
-                            By leveraging cutting-edge Artificial Intelligence and Blockchain technology, our platform enables precise yield forecasting, rapid automated disease detection, transparent AI-driven quality grading, and immutable supply chain tracking. This approach effectively bridges the gap between state-of-the-art agricultural technology and grassroots farming practices.
-                        </p>
+                        <div style={{ padding: '25px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                            <h4 style={{ color: 'var(--text-dark)', marginBottom: '12px', fontSize: '1.15rem' }}>Our Innovative Solution</h4>
+                            <p style={{ color: 'var(--text-light)', marginBottom: '12px', lineHeight: '1.6' }}>
+                                To address these systemic issues, our research introduces a comprehensive <strong>Machine Learning Based Integrated Solution for Smart Pepper Farming</strong>. We aim to revolutionize the traditional landscape by creating an accessible, digital ecosystem tailored specifically for local farmers.
+                            </p>
+                            <p style={{ color: 'var(--text-light)', margin: 0, lineHeight: '1.6' }}>
+                                By leveraging cutting-edge Artificial Intelligence and Blockchain technology, our platform enables precise yield forecasting, rapid automated disease detection, transparent AI-driven quality grading, and immutable supply chain tracking. This approach effectively bridges the gap between state-of-the-art agricultural technology and grassroots farming practices.
+                            </p>
+                        </div>
                     </div>
                 </AccordionItem>
 
@@ -101,15 +109,17 @@ const Domain = () => {
                     isOpen={openSection === 3}
                     onToggle={() => toggleSection(3)}
                 >
-                    <p><strong>Main Objective:</strong> To develop a comprehensive, scalable solution that addresses identified gaps in current pepper farming systems while improving efficiency, yield and market fairness.</p>
-                    <p>Specific Objectives:</p>
-                    <ul>
-                        <li>Build ML-based system incorporating environmental data to accurately predict seasonal yield.</li>
-                        <li>Create an automated, image-based quality grading tool utilizing CNN architectures.</li>
-                        <li>Forecast market prices using robust ML time-series models for better strategic planning.</li>
-                        <li>Detect and classify crop diseases reliably through deep learning image classification.</li>
-                        <li>Implement a secure, blockchain-based traceability system to ensure supply chain transparency and batch verification.</li>
-                    </ul>
+                    <div style={{ textAlign: 'justify' }}>
+                        <p><strong>Main Objective:</strong> To develop a comprehensive, scalable solution that addresses identified gaps in current pepper farming systems while improving efficiency, yield and market fairness.</p>
+                        <p>Specific Objectives:</p>
+                        <ul>
+                            <li>Build ML-based system incorporating environmental data to accurately predict seasonal yield.</li>
+                            <li>Create an automated, image-based quality grading tool utilizing CNN architectures.</li>
+                            <li>Forecast market prices using robust ML time-series models for better strategic planning.</li>
+                            <li>Detect and classify crop diseases reliably through deep learning image classification.</li>
+                            <li>Implement a secure, blockchain-based traceability system to ensure supply chain transparency and batch verification.</li>
+                        </ul>
+                    </div>
                 </AccordionItem>
 
                 <AccordionItem
@@ -188,35 +198,50 @@ const Domain = () => {
                     isOpen={openSection === 5}
                     onToggle={() => toggleSection(5)}
                 >
-                    <div className="tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', paddingTop: '10px' }}>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Mobile App</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>Flutter</p>
-                        </div>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Backend</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>Node.js</p>
-                        </div>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Authentication</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>Firebase</p>
-                        </div>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Database</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>MongoDB</p>
-                        </div>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>APIs</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>FastAPI</p>
-                        </div>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Machine Learning</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>Python</p>
-                        </div>
-                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Deployment</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>GCP</p>
-                        </div>
+                    <div className="tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px', paddingTop: '15px' }}>
+                        {[
+                            { name: "Flutter", role: "Mobile App", slug: "flutter" },
+                            { name: "Node.js", role: "Backend", slug: "nodedotjs" },
+                            { name: "Firebase", role: "Auth & Storage", slug: "firebase" },
+                            { name: "MongoDB", role: "Database", slug: "mongodb" },
+                            { name: "FastAPI", role: "ML Service", slug: "fastapi" },
+                            { name: "Python", role: "ML & Data", slug: "python" },
+                            { name: "Google Cloud", role: "Cloud Infra", slug: "googlecloud" }
+                        ].map((tech, idx) => (
+                            <div key={idx} className="shadow-card" style={{ 
+                                padding: '25px 15px', 
+                                textAlign: 'center', 
+                                borderRadius: '16px', 
+                                display: 'flex', 
+                                flexDirection: 'column', 
+                                alignItems: 'center', 
+                                gap: '12px',
+                                transition: 'all 0.3s ease',
+                                border: '1px solid #f1f5f9'
+                            }}>
+                                <div style={{ 
+                                    width: '60px', 
+                                    height: '60px', 
+                                    display: 'flex', 
+                                    alignItems: 'center', 
+                                    justifyContent: 'center',
+                                    background: '#f8fafc',
+                                    borderRadius: '12px',
+                                    padding: '12px',
+                                    marginBottom: '5px'
+                                }}>
+                                    <img 
+                                        src={`https://cdn.simpleicons.org/${tech.slug}`} 
+                                        alt={tech.name} 
+                                        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                    />
+                                </div>
+                                <div>
+                                    <h5 style={{ color: 'var(--text-dark)', marginBottom: '4px', fontSize: '1rem', fontWeight: '700' }}>{tech.name}</h5>
+                                    <p style={{ color: 'var(--primary)', fontWeight: '600', fontSize: '0.8rem', margin: 0, opacity: 0.8 }}>{tech.role}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </AccordionItem>
             </div>
