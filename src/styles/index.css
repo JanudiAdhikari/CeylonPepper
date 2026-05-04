@@ -18,8 +18,32 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 section {
   scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    scroll-margin-top: 60px;
+  }
 }
 
 body {
@@ -41,4 +65,16 @@ body {
 .main-content {
   flex: 1;
   padding-top: 80px; /* Offset for fixed navbar */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 60px;
+  }
 }

@@ -219,18 +219,6 @@ const Domain = () => {
                         </div>
                     </div>
                 </AccordionItem>
-
-            </div>
-            <div className="cta-section anim-item anim-delay-3">
-                <div className="cta-content">
-                    <div className="cta-text">
-                        <h2>Get In Touch</h2>
-                        <p>Have questions about our research? We'd love to hear from you.</p>
-                    </div>
-                    <a href="#contact" className="cta-button">
-                        Contact Us <i className="fas fa-paper-plane"></i>
-                    </a>
-                </div>
             </div>
         </div>
     );
