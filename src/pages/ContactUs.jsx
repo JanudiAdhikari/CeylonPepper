@@ -42,26 +42,26 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container fade-in" style={{ padding: '40px 20px', maxWidth: '1200px' }}>
+    <div className="container fade-in contact-page-container">
       <div className="badge-container">
         <span className="section-badge">Connect</span>
       </div>
       <h2 className="section-title">Contact Us</h2>
-      <p className="text-center" style={{ marginBottom: '50px', fontSize: '1.1rem', color: 'var(--text-light)', maxWidth: '600px', margin: '0 auto 50px' }}>
+      <p className="contact-intro-text">
         Have questions about our research project or want to learn more? We'd love to hear from you. Send us a message below!
       </p>
 
       <div className="contact-container">
         <div className="contact-info">
-          <h3 style={{ color: 'var(--primary)', marginBottom: '30px', fontSize: '1.5rem' }}>Get in Touch</h3>
+          <h3 className="contact-info-title">Get in Touch</h3>
           
           <div className="info-block">
             <div className="info-block-icon">
               <Mail size={24} />
             </div>
             <div>
-              <strong style={{ display: 'block', color: 'var(--text-dark)', marginBottom: '5px' }}>Email Address</strong>
-              <a href="mailto:researchsliit479@gmail.com" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>researchsliit479@gmail.com</a>
+              <strong className="info-block-label">Email Address</strong>
+              <a href="mailto:researchsliit479@gmail.com" className="info-block-link">researchsliit479@gmail.com</a>
             </div>
           </div>
           
@@ -69,8 +69,8 @@ const ContactUs = () => {
             <div className="info-block-icon">
               <MapPin size={24} />
             </div>
-            <div style={{ color: 'var(--text-light)' }}>
-              <strong style={{ display: 'block', color: 'var(--text-dark)', marginBottom: '5px' }}>Location</strong>
+            <div className="info-block-content">
+              <strong className="info-block-label">Location</strong>
               SLIIT Malabe Campus,<br />
               New Kandy Road, Malabe,<br />
               Sri Lanka.
@@ -81,22 +81,22 @@ const ContactUs = () => {
               <Phone size={24} />
             </div>
             <div>
-              <strong style={{ display: 'block', color: 'var(--text-dark)', marginBottom: '5px' }}>Phone</strong>
-              <a href="tel:070393839481" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>070 3839 481</a>
+              <strong className="info-block-label">Phone</strong>
+              <a href="tel:070393839481" className="info-block-link">070 3839 481</a>
             </div>
           </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-          <h3 style={{ color: 'var(--primary)', marginBottom: '30px', fontSize: '1.5rem' }}>Send us a Message</h3>
+          <h3 className="form-title">Send us a Message</h3>
 
           {status === 'success' && (
-            <div style={{ backgroundColor: '#dcfce7', color: '#166534', padding: '15px', borderRadius: '8px', marginBottom: '20px', fontWeight: '500' }}>
+            <div className="form-success-msg">
               Message sent successfully! We will get back to you soon.
             </div>
           )}
           {status === 'error' && (
-            <div style={{ backgroundColor: '#fee2e2', color: '#991b1b', padding: '15px', borderRadius: '8px', marginBottom: '20px', fontWeight: '500' }}>
+            <div className="form-error-msg">
               Failed to send message. Please try again later.
             </div>
           )}
