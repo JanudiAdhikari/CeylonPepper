@@ -7,10 +7,16 @@ const AccordionItem = ({ icon: Icon, title, children, isOpen, onToggle }) => {
     <div className={`accordion-item ${isOpen ? 'open' : ''}`}>
       <button className="accordion-header" onClick={onToggle}>
         <div className="accordion-title-wrapper">
-          <Icon className="accordion-icon" />
+          <div className="accordion-icon-wrap">
+            <Icon className="accordion-icon" size={20} />
+          </div>
           <span className="accordion-title">{title}</span>
         </div>
-        {isOpen ? <ChevronUp className="accordion-chevron" /> : <ChevronDown className="accordion-chevron" />}
+        <div className="accordion-chevron-wrap">
+          {isOpen
+            ? <ChevronUp className="accordion-chevron" />
+            : <ChevronDown className="accordion-chevron" />}
+        </div>
       </button>
       {isOpen && (
         <div className="accordion-body">
