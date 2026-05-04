@@ -48,6 +48,9 @@ const Documents = () => {
 
   return (
     <div className="container fade-in" style={{ padding: '40px 20px', maxWidth: '1000px' }}>
+      <div className="badge-container">
+        <span className="section-badge">Resources</span>
+      </div>
       <h2 className="section-title">Project Documents</h2>
       <p className="text-center" style={{ marginBottom: '40px', color: 'var(--text-light)' }}>
         Downloadable resources and finalized research papers for the CeylonPepper project.

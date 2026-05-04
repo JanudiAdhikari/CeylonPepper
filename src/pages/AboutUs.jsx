@@ -14,6 +14,9 @@ const AboutUs = () => {
 
   return (
     <div className="container fade-in" style={{ padding: '40px 50px', maxWidth: '1400px' }}>
+      <div className="badge-container">
+        <span className="section-badge">Our Team</span>
+      </div>
       <h2 className="section-title">About Us</h2>
       <p className="text-center" style={{ marginBottom: '50px', fontSize: '1.2rem', color: 'var(--text-dark)', fontWeight: '500', maxWidth: '800px', margin: '0 auto 50px' }}>
         Meet the team behind CeylonPepper: SLIIT Software Engineering undergraduates driving the future of smart agriculture with ML and Blockchain.
