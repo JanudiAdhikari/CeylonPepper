@@ -5,7 +5,7 @@ import AccordionItem from '../components/AccordionItem';
 const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
 
 const Domain = () => {
-    const [openSection, setOpenSection] = useState(0);
+    const [openSection, setOpenSection] = useState(-1);
 
     const toggleSection = (index) => {
         setOpenSection(openSection === index ? -1 : index);
@@ -47,9 +47,25 @@ const Domain = () => {
                     isOpen={openSection === 2}
                     onToggle={() => toggleSection(2)}
                 >
-                    <p><strong>Research Problem:</strong> The agricultural sector faces increasing challenges in managing supply chains while maintaining profitability and quality. Traditional approaches fail to scale effectively, leading to bottlenecks.</p>
-                    <p>The core problems include unpredictable crop yield resulting in poor supply chain management, lack of standardized automated quality grading, price uncertainty leading to farmer exploitation, and slow, inaccurate leaf disease detection.</p>
-                    <p><strong>Proposed Solution:</strong> Our research introduces an innovative Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka. This approach enables precise forecasting, automated disease detection, and fair grading via advanced AI algorithms, effectively bridging the gap between modern technology and traditional farming.</p>
+                    <div style={{ marginBottom: '25px', padding: '25px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                        <h4 style={{ color: 'var(--text-dark)', marginBottom: '12px', fontSize: '1.15rem' }}>The Core Challenge</h4>
+                        <p style={{ color: 'var(--text-light)', marginBottom: '12px', lineHeight: '1.6' }}>
+                            Sri Lanka's agricultural sector, particularly the pepper farming industry, faces escalating challenges in maintaining consistent profitability, quality, and supply chain integrity. Traditional, manual approaches are highly vulnerable to volatile climate changes, unpredictable market forces, and a lack of technological adoption, which ultimately leads to severe bottlenecks and economic losses.
+                        </p>
+                        <p style={{ color: 'var(--text-light)', margin: 0, lineHeight: '1.6' }}>
+                            <strong>Key Obstacles:</strong> Unpredictable crop yields hindering supply chain planning, absence of automated and standardized quality grading systems, severe price volatility causing farmer exploitation, and delayed, inaccurate detection of critical plant diseases.
+                        </p>
+                    </div>
+
+                    <div style={{ padding: '25px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                        <h4 style={{ color: 'var(--text-dark)', marginBottom: '12px', fontSize: '1.15rem' }}>Our Innovative Solution</h4>
+                        <p style={{ color: 'var(--text-light)', marginBottom: '12px', lineHeight: '1.6' }}>
+                            To address these systemic issues, our research introduces a comprehensive <strong>Machine Learning Based Integrated Solution for Smart Pepper Farming</strong>. We aim to revolutionize the traditional landscape by creating an accessible, digital ecosystem tailored specifically for local farmers.
+                        </p>
+                        <p style={{ color: 'var(--text-light)', margin: 0, lineHeight: '1.6' }}>
+                            By leveraging cutting-edge Artificial Intelligence and Blockchain technology, our platform enables precise yield forecasting, rapid automated disease detection, transparent AI-driven quality grading, and immutable supply chain tracking. This approach effectively bridges the gap between state-of-the-art agricultural technology and grassroots farming practices.
+                        </p>
+                    </div>
                 </AccordionItem>
 
                 <AccordionItem
@@ -58,13 +74,14 @@ const Domain = () => {
                     isOpen={openSection === 3}
                     onToggle={() => toggleSection(3)}
                 >
-                    <p><strong>Main Objective:</strong> To develop a comprehensive, scalable AI solution that addresses identified gaps in current pepper farming systems while improving efficiency, yield, and market fairness.</p>
+                    <p><strong>Main Objective:</strong> To develop a comprehensive, scalable solution that addresses identified gaps in current pepper farming systems while improving efficiency, yield and market fairness.</p>
                     <p>Specific Objectives:</p>
                     <ul>
-                        <li>Build an AI-based system incorporating environmental data to accurately predict seasonal yield.</li>
+                        <li>Build ML-based system incorporating environmental data to accurately predict seasonal yield.</li>
                         <li>Create an automated, image-based quality grading tool utilizing CNN architectures.</li>
                         <li>Forecast market prices using robust ML time-series models for better strategic planning.</li>
                         <li>Detect and classify crop diseases reliably through deep learning image classification.</li>
+                        <li>Implement a secure, blockchain-based traceability system to ensure supply chain transparency and batch verification.</li>
                     </ul>
                 </AccordionItem>
 
@@ -158,12 +175,20 @@ const Domain = () => {
                             <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>Firebase</p>
                         </div>
                         <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
-                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Databases</h5>
-                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>MongoDB, SQLite</p>
+                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Database</h5>
+                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>MongoDB</p>
                         </div>
                         <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
                             <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>APIs</h5>
                             <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>FastAPI</p>
+                        </div>
+                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
+                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Machine Learning</h5>
+                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>Python</p>
+                        </div>
+                        <div className="tech-card shadow-card" style={{ padding: '20px', textAlign: 'center', borderRadius: '8px', border: '1px solid #f3f4f6' }}>
+                            <h5 style={{ color: 'var(--primary)', marginBottom: '10px', fontSize: '1.1rem' }}>Deployment</h5>
+                            <p style={{ fontWeight: '500', color: '#374151', margin: 0 }}>GCP</p>
                         </div>
                     </div>
                 </AccordionItem>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo_circle.png';
 import '../styles/Navbar.css';
@@ -17,13 +16,13 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Domain', path: '/domain' },
-    { name: 'Milestones', path: '/milestones' },
-    { name: 'Documents', path: '/documents' },
-    { name: 'Presentations', path: '/presentations' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'Home', id: 'home' },
+    { name: 'Domain', id: 'domain' },
+    { name: 'Milestones', id: 'milestones' },
+    { name: 'Documents', id: 'documents' },
+    { name: 'Presentations', id: 'presentations' },
+    { name: 'About Us', id: 'about' },
+    { name: 'Contact Us', id: 'contact' },
   ];
 
   return (
@@ -36,13 +35,9 @@ const Navbar = () => {
 
         <div className="navbar-links desktop-only">
           {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
-            >
+            <a key={link.name} href={`#${link.id}`} className="nav-link">
               {link.name}
-            </NavLink>
+            </a>
           ))}
         </div>
 
@@ -54,14 +49,14 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="mobile-menu">
           {navLinks.map((link) => (
-            <NavLink
+            <a
               key={link.name}
-              to={link.path}
+              href={`#${link.id}`}
               onClick={() => setIsMenuOpen(false)}
-              className={({ isActive }) => (isActive ? 'mobile-link active' : 'mobile-link')}
+              className="mobile-link"
             >
               {link.name}
-            </NavLink>
+            </a>
           ))}
         </div>
       )}
