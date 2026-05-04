@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BookOpen, Search, Target, Compass, GitBranch, Cpu } from 'lucide-react';
+import { BookOpen, Search, Target, Compass, GitBranch, Cpu, Layout, Shield, TrendingUp, Activity, BarChart3, CheckCircle2, Sprout, Award, Link, Microscope } from 'lucide-react';
 import AccordionItem from '../components/AccordionItem';
 
 const getImgUrl = (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w800`;
@@ -36,24 +36,94 @@ const Domain = () => {
     };
 
     return (
-        <div ref={sectionRef} className={`fade-in ${isVisible ? 'page-animated' : ''}`} style={{ backgroundColor: '#f9fafb', minHeight: '100vh', paddingBottom: '60px' }}>
-            <div className="badge-container anim-item anim-delay-1">
-                <span className="section-badge">Research Scope</span>
+        <div ref={sectionRef} className={`fade-in domain-page-container ${isVisible ? 'page-animated' : ''}`}>
+            
+            {/* Core Modules Section */}
+            <div className="container core-modules-container">
+                <div className="badge-container anim-item anim-delay-1">
+                    <span className="section-badge">Our Pillars</span>
+                </div>
+                <div className="scope-header anim-item anim-delay-1">
+                    <h1>Core Modules</h1>
+                    <div className="underline"></div>
+                    <p>The four fundamental components driving our smart farming ecosystem</p>
+                </div>
+                <div className="modules-grid">
+                    {[
+                        { title: "Yield Prediction", icon: Sprout, desc: "Leveraging multimodal deep learning and environmental data for high-precision seasonal forecasts.", color: "#4caf50" },
+                        { title: "Quality Grading", icon: Award, desc: "Advanced CNN architectures for standardized, automated post-harvest pepper quality assessment.", color: "#2e7d32" },
+                        { title: "Market Forecast & Blockchain", icon: Link, desc: "Combining ML-driven price forecasting with immutable blockchain traceability protocols.", color: "#1b5e20" },
+                        { title: "Disease Detection", icon: Microscope, desc: "Deep convolutional neural networks for early identification and classification of plant pathology.", color: "#81c784" }
+                    ].map((mod, idx) => (
+                        <div key={idx} className="module-card anim-item" style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
+                            <div className="module-number">0{idx + 1}</div>
+                            <div className="module-icon-container" style={{ backgroundColor: `${mod.color}15`, color: mod.color }}>
+                                <mod.icon size={32} />
+                            </div>
+                            <h3 className="module-title">{mod.title}</h3>
+                            <p className="module-desc">{mod.desc}</p>
+                            <div className="module-footer">
+                                <div className="module-line" style={{ backgroundColor: mod.color }}></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="scope-header anim-item anim-delay-1">
+
+            {/* Key Benefits Section */}
+            <div className="benefits-section-container">
+                <div className="benefits-bg-glow"></div>
+                <div className="container">
+                    <div className="badge-container anim-item">
+                        <span className="section-badge">Impact</span>
+                    </div>
+                    <div className="scope-header anim-item">
+                        <h1>Key Benefits</h1>
+                        <div className="underline"></div>
+                        <p>Empowering stakeholders with technology-driven agricultural solutions</p>
+                    </div>
+                    <div className="benefits-grid benefits-grid-layout">
+                        {[
+                            { title: "Increased Productivity", desc: "Optimize harvests with data-driven yield predictions and early disease warnings." },
+                            { title: "Fair Market Value", desc: "Automated grading ensures farmers receive transparent and consistent pricing." },
+                            { title: "Supply Chain Trust", desc: "Blockchain traceability guarantees product origin for global export compliance." },
+                            { title: "Informed Decisions", desc: "Predictive price analytics help stakeholders navigate market volatility effectively." },
+                            { title: "Integrated Ecosystem", desc: "A unified platform connecting all critical farming processes for seamless management." },
+                            { title: "Enhanced Accessibility", desc: "User-friendly digital tools tailored specifically for local farmers to bridge the tech divide." }
+                        ].map((ben, idx) => (
+                            <div key={idx} className="benefit-item anim-item" style={{ 
+                                animationDelay: `${0.1 + idx * 0.15}s`
+                            }}>
+                                <div className="benefit-icon-wrapper">
+                                    <CheckCircle2 size={24} />
+                                </div>
+                                <div>
+                                    <h4 className="benefit-title">{ben.title}</h4>
+                                    <p className="benefit-desc">{ben.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="badge-container anim-item">
+                <span className="section-badge">Deep Dive</span>
+            </div>
+            <div className="scope-header anim-item">
                 <h1>Project Scope</h1>
                 <div className="underline"></div>
                 <p>Comprehensive overview of our research approach and methodology</p>
             </div>
 
-            <div className="accordion-wrapper anim-item anim-delay-2">
+            <div className="accordion-container container anim-item anim-delay-2">
                 <AccordionItem
                     icon={BookOpen}
                     title="Literature Survey"
                     isOpen={openSection === 0}
                     onToggle={() => toggleSection(0)}
                 >
-                    <div style={{ textAlign: 'justify' }}>
+                    <div className="accordion-text-justify">
                         <p>The literature review examines existing research and systems related to traditional pepper farming in Sri Lanka. Recent studies in agricultural technology highlight a significant shift towards integrating Machine Learning and IoT to modernize traditional farming practices, addressing long-standing challenges in yield estimation and disease management.</p>
                         <p>Research on yield prediction has demonstrated the effectiveness of advanced algorithms such as Long Short-Term Memory (LSTM) networks and XGBoost in analyzing complex, multi-variable datasets. These models integrate historical weather patterns, soil conditions, and crop performance to provide accurate seasonal forecasts, helping farmers manage climate-related risks.</p>
                         <p>In the domain of plant pathology, Convolutional Neural Networks (CNNs) like ResNet and EfficientNet have become the gold standard for automated disease detection. Recent implementations have achieved high classification accuracies for pepper-specific diseases, enabling early intervention. Furthermore, computer vision research emphasizes automated quality grading based on physical attributes such as color, size, and texture, ensuring standardized market valuation.</p>
@@ -201,12 +271,14 @@ const Domain = () => {
                     <div className="tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px', paddingTop: '15px' }}>
                         {[
                             { name: "Flutter", role: "Mobile App", slug: "flutter" },
+                            { name: "React", role: "Admin Web", slug: "react" },
                             { name: "Node.js", role: "Backend", slug: "nodedotjs" },
                             { name: "Firebase", role: "Auth & Storage", slug: "firebase" },
                             { name: "MongoDB", role: "Database", slug: "mongodb" },
                             { name: "FastAPI", role: "ML Service", slug: "fastapi" },
                             { name: "Python", role: "ML & Data", slug: "python" },
-                            { name: "Google Cloud", role: "Cloud Infra", slug: "googlecloud" }
+                            { name: "Google Cloud", role: "Cloud Infra", slug: "googlecloud" },
+                            { name: "Docker", role: "Containerization", slug: "docker" }
                         ].map((tech, idx) => (
                             <div key={idx} className="shadow-card" style={{ 
                                 padding: '25px 15px', 

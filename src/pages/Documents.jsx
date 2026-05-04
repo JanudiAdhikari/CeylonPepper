@@ -47,28 +47,28 @@ const Documents = () => {
   ];
 
   return (
-    <div className="container fade-in" style={{ padding: '40px 20px', maxWidth: '1000px' }}>
+    <div className="container fade-in docs-page-container">
       <div className="badge-container">
         <span className="section-badge">Resources</span>
       </div>
       <h2 className="section-title">Project Documents</h2>
-      <p className="text-center" style={{ marginBottom: '40px', color: 'var(--text-light)' }}>
-        Downloadable resources and finalized research papers for the CeylonPepper project.
+      <p className="docs-intro-text">
+        Downloadable resources and finalized research papers for the CeylonPepper project
       </p>
       
       {documentGroups.map((group, index) => (
         <div key={index} style={{ marginBottom: '50px' }}>
-          <h3 style={{ color: 'var(--primary)', marginBottom: '20px', borderBottom: '2px solid #f0fdf4', paddingBottom: '10px' }}>
+          <h3 className="doc-group-title">
             {group.groupTitle}
           </h3>
-          <div className="card-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+          <div className="card-grid docs-card-grid">
             {group.docs.map((doc, i) => (
-              <div className="download-card" key={i} style={{ padding: '20px' }}>
-                <div className="doc-icon" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>📄</div>
-                <h4 style={{ fontSize: '1.1rem', marginBottom: '10px' }}>{doc.title}</h4>
-                <p style={{ fontSize: '0.9rem', marginBottom: '15px' }}>{doc.desc}</p>
-                <a href={doc.file} target="_blank" rel="noopener noreferrer" className="btn-download" style={{ display: 'inline-block', textDecoration: 'none' }}>
-                  View PDF
+              <div className="download-card doc-card-padding" key={i}>
+                <div className="doc-icon doc-icon-styled">📄</div>
+                <h4 className="doc-title-text">{doc.title}</h4>
+                <p className="doc-desc-text">{doc.desc}</p>
+                <a href={doc.file} target="_blank" rel="noopener noreferrer" className="btn-download doc-view-link">
+                   View PDF
                 </a>
               </div>
             ))}
