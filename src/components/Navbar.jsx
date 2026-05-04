@@ -8,9 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 30);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,27 +20,31 @@ const Navbar = () => {
     { name: 'Documents', id: 'documents' },
     { name: 'Presentations', id: 'presentations' },
     { name: 'About Us', id: 'about' },
-    { name: 'Contact Us', id: 'contact' },
+    { name: 'Contact', id: 'contact', cta: true },
   ];
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <div className="navbar-logo">
-          <img src={logo} alt="CeylonPepper Logo" className="logo-icon" />
+        <a className="navbar-logo" href="#home">
+          <img src={logo} alt="CeylonPepper" className="logo-icon" />
           <span className="logo-text">CeylonPepper</span>
-        </div>
+        </a>
 
         <div className="navbar-links desktop-only">
           {navLinks.map((link) => (
-            <a key={link.name} href={`#${link.id}`} className="nav-link">
+            <a
+              key={link.name}
+              href={`#${link.id}`}
+              className={`nav-link${link.cta ? ' cta' : ''}`}
+            >
               {link.name}
             </a>
           ))}
         </div>
 
         <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X /> : <Menu />}
+          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 

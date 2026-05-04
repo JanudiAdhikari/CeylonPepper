@@ -1,44 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --primary: #2E7D32;
-  --secondary: #66BB6A;
-  --accent: #FFD700;
-  --bg-color: #f9fdfa;
-  --text-dark: #1f2937;
-  --text-light: #4b5563;
+  --primary: #1a6b2e;
+  --primary-light: #2d8f47;
+  --primary-dark: #0d4a1f;
+  --secondary: #5cb85c;
+  --accent: #a8d5a2;
+  --accent-gold: #c9a84c;
+  --bg: #f5f9f5;
+  --bg-pure: #ffffff;
+  --bg-dark: #0b1f10;
+  --bg-dark-2: #102318;
+  --text-dark: #0d1f12;
+  --text-mid: #2d4a34;
+  --text-light: #5a7a61;
+  --text-muted: #8aaa90;
+  --border: #d4e8d4;
+  --border-light: #eaf3ea;
+  --shadow-sm: 0 2px 8px rgba(26,107,46,0.06);
+  --shadow-md: 0 8px 30px rgba(26,107,46,0.10);
+  --shadow-lg: 0 20px 60px rgba(26,107,46,0.14);
+  --shadow-xl: 0 40px 100px rgba(26,107,46,0.18);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 100px;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-color);
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
   color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
+section { scroll-margin-top: 88px; }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+.page-wrapper { display: flex; flex-direction: column; min-height: 100vh; }
 
-.main-content {
-  flex: 1;
-  padding-top: 80px; /* Offset for fixed navbar */
-}
+.main-content { flex: 1; padding-top: 88px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* Selection */
+::selection { background: rgba(26,107,46,0.2); color: var(--primary-dark); }
