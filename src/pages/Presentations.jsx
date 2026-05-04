@@ -14,7 +14,7 @@ const Presentations = () => {
 
   return (
     <div className="container fade-in" style={{ padding: '40px 20px' }}>
-      <h2 className="section-title">Presentations (Slides)</h2>
+      <h2 className="section-title">Presentation Slides</h2>
       <div className="card-grid">
         {slides.map((s, i) => (
           <div className="presentation-card" key={i}>
