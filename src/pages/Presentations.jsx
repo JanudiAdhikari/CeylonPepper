@@ -9,7 +9,7 @@ const Presentations = () => {
     { title: "Proposal Presentation", desc: "Slides from the initial proposal.", file: getLink("11-lm9q6pvxswFlB1hS1rFbinWLOL8ZtP") },
     { title: "Progress Presentation 1", desc: "First progress evaluation slides.", file: getLink("1BGGA1q_INlq4JB9IxElBtptWjHnYOF6U") },
     { title: "Progress Presentation 2", desc: "Second progress evaluation slides.", file: getLink("17FT12JekoOogWiepcAuko9x9ktaHU8RA") },
-    { title: "Final Presentation", desc: "Comprehensive final presentation slides.", file: driveLink }
+    { title: "Final Presentation", desc: "Comprehensive final presentation slides.", file: getLink("1zfuJlmW5Kcrlh7HF7ezXnldGdf3N4CR0") }
   ];
 
   return (

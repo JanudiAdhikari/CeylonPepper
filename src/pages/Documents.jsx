@@ -31,11 +31,11 @@ const Documents = () => {
     {
       groupTitle: "Final Reports",
       docs: [
-        { title: "Final Report (Group)", desc: "Comprehensive final group report.", file: driveLink },
-        { title: "Yield Prediction Final", desc: "Component final report.", file: driveLink },
-        { title: "Disease Detection Final", desc: "Component final report.", file: driveLink },
-        { title: "Quality Grading Final", desc: "Component final report.", file: driveLink },
-        { title: "Price Forecasting Final", desc: "Component final report.", file: driveLink }
+        { title: "Final Report (Group)", desc: "Comprehensive final group report.", file: getLink("1CUyaW1_yDjJJ-PBzmLqcs02-cVk3iuC0") },
+        { title: "Yield Prediction Thesis", desc: "Component final report.", file: getLink("1-oIyILW7dCXIqKsoRLj1OvRvNUGN_LfN") },
+        { title: "Disease Detection Thesis", desc: "Component final report.", file: getLink("1wb13Sqd-6j5Qs_d5jsa96qivxxnQ_uQY") },
+        { title: "Quality Grading Thesis", desc: "Component final report.", file: getLink("1977b16NOkHkOWpz9KKZPjkky6g-MJFYs") },
+        { title: "Price Forecasting Thesis", desc: "Component final report.", file: getLink("1cUJI_FSOjTEijUtn7Tbvzek3NuB3omRb") }
       ]
     },
     {
@@ -43,7 +43,7 @@ const Documents = () => {
       docs: [
         { title: "Research Paper", desc: "Finalized research paper for publication.", file: getLink("1Q11SOmvkkcwRoS0qyffecc4LC-p56xf3") }
       ]
-    }
+    },
   ];
 
   return (
