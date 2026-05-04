@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Pages.css';
+import animationVideo from '../assets/animation.mp4';
 
 const Home = () => {
   return (
@@ -7,15 +8,23 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-background"></div>
-        <div className="container hero-content text-center">
-          <div className="hero-badge">Smart Agriculture</div>
-          <h1 className="hero-title">
-            <span className="text-gradient">CeylonPepper</span>
-          </h1>
-          <h2 className="hero-subtitle">Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka</h2>
-          <p className="hero-abstract">
-            An innovative solution integrating Machine Learning, Deep Learning and Blockchain concepts to revolutionize pepper farming in Sri Lanka through accurate yield predictions, rapid disease detection, quality grading and market forecasting with blockchain Integrity.
-          </p>
+        <div className="container hero-content">
+          <div className="hero-grid">
+            <div className="hero-text">
+              <div className="hero-badge">Smart Agriculture</div>
+              <h1 className="hero-title">
+                <span className="text-gradient">CeylonPepper</span>
+              </h1>
+              <h2 className="hero-subtitle">Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka</h2>
+              <p className="hero-abstract">
+                An innovative solution integrating Machine Learning, Deep Learning and Blockchain concepts to revolutionize pepper farming in Sri Lanka through accurate yield predictions, rapid disease detection, quality grading and market forecasting with blockchain integrity.
+              </p>
+            </div>
+
+            <div className="hero-media">
+              <video className="hero-video" src={animationVideo} autoPlay muted loop playsInline />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg-color);
