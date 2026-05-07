@@ -42,8 +42,7 @@ const Home = () => {
 
               <div className="anim-item anim-delay-3">
                 <p className="hero-tagline">
-                  Machine Learning &amp; Blockchain-powered platform for smart pepper farming —
-                  helping Sri Lankan farmers predict yields, detect disease, and trade smarter.
+                  Machine Learning Based Integrated Solution for Smart Pepper Farming in Sri Lanka 
                 </p>
               </div>
 
